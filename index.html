@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- This is your page title that appears on the browser window or tab -->
         <title>Jude's Unit Converter</title>
         <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
     </head>
     <body>
         <section id="home">
-            <!-- This is the main heading -->
 	        <header><b>Jude's Unit Converter</b></header>
             <nav>
                 <div class="topdiv"
@@ -36,10 +35,10 @@
                             <label for="celsius">Celsius</label> <br/>
 
                             <input type="number" id="celsius"/> <br/>
-                            
+
                             <!-- The conversion button -->
-                            <button id="temperature"> Convert </button> <br/>
-                            
+                            <button id="temperature" onclick="temperature()"> Convert </button> <br/>
+
                             <!-- Label for Temperature output -->
                             <input type="number" id="fahrenheit"> <br/>
 
@@ -67,7 +66,7 @@
                             <input type="number" id="kilo"> <br/>
 
                             <!-- The conversion button -->
-                            <button id="weight"> Convert </button> <br/>
+                            <button id="weight" onclick="weight()"> Convert </button> <br/>
 
                             <!-- Label for Weight output -->
                             <input type="number" id="pounds"> <br/>
@@ -96,7 +95,7 @@
                         <input type="number" id="km"> <br/>
 
                         <!-- The conversion button -->
-                        <button id="distance"> Convert </button> <br/>
+                        <button id="distance" onclick="distance()"> Convert </button> <br/>
 
                         <!-- Label for Distance output -->
                         <input type="number" id="miles"> <br/>
@@ -116,7 +115,7 @@
             </a>
 
         </div>
-        
+
     <footer>Learn more about HTML as a part of the IBM Fullstack Cloud Developer Certification</footer>
     </body>
 </html>
