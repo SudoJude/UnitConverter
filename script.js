@@ -1,21 +1,47 @@
+// Tracks which input in each section was last edited, so the Convert
+// button knows which direction to calculate.
+var lastEdited = {
+    temperature: "celsius",
+    weight: "kilo",
+    distance: "km"
+};
+
 function temperature(){
-    //To convert celsius to farenheit
-    //(CEL * 9/5) + 32
-    var c = document.getElementById("celsius").value;
-    var f = (c * 9/5) + 32
-    document.getElementById("fahrenheit").value = f
+    if (lastEdited.temperature === "celsius") {
+        //To convert celsius to farenheit
+        //(CEL * 9/5) + 32
+        var c = document.getElementById("celsius").value;
+        document.getElementById("fahrenheit").value = (c * 9/5) + 32;
+    } else {
+        //To convert farenheit to celsius
+        //(FAR - 32) * 5/9
+        var f = document.getElementById("fahrenheit").value;
+        document.getElementById("celsius").value = (f - 32) * 5/9;
+    }
 }
 function weight(){
-    //To convert KGs to Pounds
-    // KG * 2.2
-    var kg = document.getElementById("kilo").value;
-    var p = kg * 2.2
-    document.getElementById("pounds").value = p
+    if (lastEdited.weight === "kilo") {
+        //To convert KGs to Pounds
+        // KG * 2.2
+        var kg = document.getElementById("kilo").value;
+        document.getElementById("pounds").value = kg * 2.2;
+    } else {
+        //To convert Pounds to KGs
+        // LB / 2.2
+        var p = document.getElementById("pounds").value;
+        document.getElementById("kilo").value = p / 2.2;
+    }
 }
 function distance(){
-    //To convert KMs to Miles
-    // KM * 0.62137
-    var km = document.getElementById("km").value;
-    var m = km * 0.62137
-    document.getElementById("miles").value = m
+    if (lastEdited.distance === "km") {
+        //To convert KMs to Miles
+        // KM * 0.62137
+        var km = document.getElementById("km").value;
+        document.getElementById("miles").value = km * 0.62137;
+    } else {
+        //To convert Miles to KMs
+        // MI / 0.62137
+        var m = document.getElementById("miles").value;
+        document.getElementById("km").value = m / 0.62137;
+    }
 }

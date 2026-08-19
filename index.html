@@ -34,13 +34,13 @@
                             <!-- Label for Temperature input -->
                             <label for="celsius">Celsius</label> <br/>
 
-                            <input type="number" id="celsius"/> <br/>
+                            <input type="number" id="celsius" oninput="lastEdited.temperature='celsius'"/> <br/>
 
                             <!-- The conversion button -->
                             <button id="temperature" onclick="temperature()"> Convert </button> <br/>
 
                             <!-- Label for Temperature output -->
-                            <input type="number" id="fahrenheit"> <br/>
+                            <input type="number" id="fahrenheit" oninput="lastEdited.temperature='fahrenheit'"> <br/>
 
                             <label for="fahrenheit">Fahrenheit</label>
                     </fieldset>
@@ -63,13 +63,13 @@
                             <!-- Label for Weight input -->
                             <label for="kilo">Kilograms</label> <br/>
 
-                            <input type="number" id="kilo"> <br/>
+                            <input type="number" id="kilo" oninput="lastEdited.weight='kilo'"> <br/>
 
                             <!-- The conversion button -->
                             <button id="weight" onclick="weight()"> Convert </button> <br/>
 
                             <!-- Label for Weight output -->
-                            <input type="number" id="pounds"> <br/>
+                            <input type="number" id="pounds" oninput="lastEdited.weight='pounds'"> <br/>
 
                             <label for="pounds">Pounds</label>
 			</fieldset>
@@ -92,13 +92,13 @@
                         <!-- Label for Distance input -->
                         <label for="km">Kilometers</label> <br/>
 
-                        <input type="number" id="km"> <br/>
+                        <input type="number" id="km" oninput="lastEdited.distance='km'"> <br/>
 
                         <!-- The conversion button -->
                         <button id="distance" onclick="distance()"> Convert </button> <br/>
 
                         <!-- Label for Distance output -->
-                        <input type="number" id="miles"> <br/>
+                        <input type="number" id="miles" oninput="lastEdited.distance='miles'"> <br/>
 
                         <label for="miles">Miles</label>
                     </fieldset>
